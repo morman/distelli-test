@@ -1,5 +1,5 @@
 # distelli-test - testing distilli capability
-FROM alpine
+FROM alpine:latest
 MAINTAINER stephen.morman@gmail.com
 # update OPS and load apps and create working dir
 RUN apt-get update && apt-get install -y ruby && mkdir -p /opt/distelli-test
@@ -11,3 +11,4 @@ WORKDIR /opt/distelli-test
 EXPOSE 4567
 # run service with bundler, binding to all addresses on port 4567
 CMD ["ruby", "/opt/distelli-test/app.rb", "--host", "0.0.0.0", "-p", "4567"]
+# docker build -t "distelli-test:latest" .
