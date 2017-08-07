@@ -1,5 +1,5 @@
 # distelli-test - testing distilli capability
-FROM alpine:latest
+FROM ubuntu:latest
 MAINTAINER stephen.morman@gmail.com
 # update OPS and load apps and create working dir
 RUN apt-get update && apt-get install -y ruby && mkdir -p /opt/distelli-test
